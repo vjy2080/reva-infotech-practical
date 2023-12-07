@@ -24,6 +24,7 @@ function SignUp() {
 
           <div className='inp'>
             <label className='inpLable' htmlFor="address">Address</label>
+            <input type="text" name="address" id="address" />
           </div>
 
           <div className='inp'>

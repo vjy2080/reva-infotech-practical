@@ -7,7 +7,7 @@ function Login() {
 
   return (
     <>
-      <div className="border border-danger rounded-5 w-50 m-auto mt-5 p-5 bg-pink">
+      <div className="border border-danger rounded-5 w-50 m-auto my-3 p-2 bg-pink">
         <form method='post'>
           <h3 className='text-center mb-5'>Login Here</h3>
 
@@ -26,10 +26,14 @@ function Login() {
             <button type='submit' id='login' className='btn btn-primary '>Login</button>
           </div>
           <div>
-            <p className='text-success mt-3 text-center'>Use :- Id - test@example.com & Password - test for login</p>
-            <p className='text-success mt-3 fw-bold text-center'>OR</p>
+            <p className='mt-3 text-center'>Use :- Id - test@example.com & Password - test for login</p>
+            <p className='mt-3 fw-bold text-center'>OR</p>
           </div>
-          
+          <div className='d-flex justify-content-center'>
+
+            <button type='submit' id='login' className='btn btn-success '>Register</button>
+          </div>
+
         </form>
       </div>
     </>
