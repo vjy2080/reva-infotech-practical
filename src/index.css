@@ -25,3 +25,25 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.error {
+  background-color: rgb(241, 97, 97);
+  color: rgb(17, 17, 136);
+  padding: 5px 15px;
+  border-radius: 0 0 10px 10px;
+  animation: pop 5s ease-in-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

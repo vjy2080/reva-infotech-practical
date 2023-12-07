@@ -1,16 +1,26 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import ErrorComponent from './ErrorComponent';
 
 function Login() {
-
-  const navigate = useNavigate();
 
   const initFormValue = {
     email: "",
     password: "",
   };
 
+  const navigate = useNavigate();
+
+  const [errorMessage, setErrorMessage] = useState('');
   const [formValue, setFormValue] = useState(initFormValue);
+
+
+
+  const simulateError = () => {
+    setTimeout(() => {
+      setErrorMessage('');
+    }, 5000);
+  };
 
   const onChange = (e) => {
     setFormValue({ ...formValue, [e.target.name]: e.target.value });
@@ -35,10 +45,10 @@ function Login() {
       // Handle the response
       if (response.ok) {
         const data = await response.json();
-
+        // console.log(data.length);
+        (data.length > 0) ? navigate('/home') : setErrorMessage("Check email or password");
         localStorage.setItem('data', JSON.stringify(data));
-        navigate('/home');
-        // Handle the data
+
       } else {
         // Handle the error
         console.error('Error:', response.statusText);
@@ -46,10 +56,12 @@ function Login() {
     } catch (error) {
       console.error('Error:', error);
     }
+
   };
 
   return (
     <>
+      {errorMessage && <ErrorComponent message={errorMessage} />}
       <div className="border border-dark rounded-5 w-50 m-auto my-3 p-2 bg-pink">
         <form onSubmit={login} method='post'>
           <h3 className='text-center mb-5'>Login Here</h3>
@@ -66,7 +78,7 @@ function Login() {
           </div>
 
           <div className='d-flex justify-content-center'>
-            <button type='submit' id='login' className='btn btn-primary '>Login</button>
+            <button type='submit' id='login' className='btn btn-primary' onClick={simulateError}>Login</button>
           </div>
           <div>
             <p className='mt-3 text-center'>Use :- Id - test@example.com & Password - test for login</p>
