@@ -1,0 +1,119 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "user": [
+    {
+      "name": "Test",
+      "email": "test@example.com",
+      "phoneNo": "1234567890",
+      "address": "Gandhinagar, Gujarat, India",
+      "password": "test",
+      "position": {
+        "lat": 23.24081,
+        "lng": 72.63733
+      },
+      "id": 1
+    },
+    {
+      "name": "Vijay Prajapati",
+      "email": "vjy2080@gmail.com",
+      "phoneNo": "+919998517185",
+      "address": "Vavol, Gandhinagar, Gujarat, India",
+      "password": "vjy",
+      "position": {
+        "lat": 23.22925,
+        "lng": 72.62016
+      },
+      "id": 2
+    },
+    {
+      "name": "Krishika Prajapati",
+      "email": "kvp@gmail.com",
+      "phoneNo": "1234567890",
+      "address": "Ahmedabad, Gujarat, India",
+      "password": "kvp",
+      "position": {
+        "lat": 23.02778,
+        "lng": 72.60026
+      },
+      "id": 3
+    },
+    {
+      "name": "Rutvik Soni",
+      "email": "rtvk@gmail.com",
+      "phoneNo": "1234567890",
+      "address": "Rajkot, Gujarat, India",
+      "password": "rtvk",
+      "position": {
+        "lat": 22.29715,
+        "lng": 70.80157
+      },
+      "id": 4
+    },
+    {
+      "name": "Hemant Patel",
+      "email": "hgp@gmail.com",
+      "phoneNo": "1234567890",
+      "address": "New York, NY, United States",
+      "password": "hgp",
+      "position": {
+        "lat": 40.71453,
+        "lng": -74.00712
+      },
+      "id": 5
+    },
+    {
+      "name": "Nirmal Jani",
+      "email": "nrml@gmail.com",
+      "phoneNo": "1234567890",
+      "address": "Oakland Int'l Airport",
+      "password": "nrml",
+      "position": {
+        "lat": 37.71247,
+        "lng": -122.2132
+      },
+      "id": 6
+    },
+    {
+      "name": "Pooja Trived",
+      "email": "pjt@gmail.com",
+      "phoneNo": "1234567890",
+      "address": "Vadodara, Gujarat, India",
+      "password": "pjt",
+      "position": {
+        "lat": 22.30948,
+        "lng": 73.1799
+      },
+      "id": 7
+    },
+    {
+      "name": "Ruhul Mansuri",
+      "email": "Ruh@gmail.com",
+      "phoneNo": "1234567890",
+      "address": "Surat, Gujarat, India",
+      "password": "ruh",
+      "position": {
+        "lat": 21.1859,
+        "lng": 72.83662
+      },
+      "id": 8
+    },
+    {
+      "name": "Sneh Rajput",
+      "email": "sneh@gmail.com",
+      "phoneNo": "1234567890",
+      "address": "Mumbai, Maharashtra, India",
+      "password": "sneh",
+      "position": {
+        "lat": 18.94018,
+        "lng": 72.83484
+      },
+      "id": 9
+    }
+  ]
+}
