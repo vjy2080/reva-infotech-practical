@@ -99,7 +99,7 @@ function Home() {
         <div className="row m-3">
           <h3 className='text-center'>List of Users</h3>
           {userList.map((user, index) => (
-            <div className="col-lg-4 p-3" key={index} open={basicModal}>
+            <div className="col-sm p-3" key={index} open={basicModal}>
               {/* <Link to="/map"> */}
 
               <MDBCard className='border border-info p-0'>

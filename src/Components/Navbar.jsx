@@ -41,7 +41,7 @@ export default function App() {
             <MDBNavbar expand='lg' dark bgColor='dark'>
                 <MDBContainer fluid>
                     <MDBNavbarBrand className='me-5 ms-3'>Practical</MDBNavbarBrand>
-                    <MDBNavbarToggler
+                    {/* <MDBNavbarToggler
                         type='button'
                         data-target='#navbarColor02'
                         aria-controls='navbarColor02'
@@ -50,7 +50,7 @@ export default function App() {
                         onClick={() => setOpenNavColor(!openNavColor)}
                     >
                         <MDBIcon icon='bars' fas />
-                    </MDBNavbarToggler>
+                    </MDBNavbarToggler> */}
                     <MDBCollapse open={openNavColor} navbar>
                         {/* 
                         {(loginStatus === "Login") ? (<div><Link to='/' className='text-light mx-3'>Login</Link>
