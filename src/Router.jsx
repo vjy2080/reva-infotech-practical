@@ -3,6 +3,7 @@ import Home from "./Components/Home";
 import Login from "./Components/Login";
 import SignUp from './Components/SignUp';
 import Navbar from './Components/Navbar';
+import MapModal from "./Components/MapModal";
 
 
 const Router = createBrowserRouter([
@@ -18,6 +19,11 @@ const Router = createBrowserRouter([
     {
         path: "/",
         element: <><Navbar /><Login /></>,
+    }
+    ,
+    {
+        path: "/map",
+        element: <><Navbar /><MapModal /></>,
     }
 ]);
 

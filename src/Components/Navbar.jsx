@@ -18,19 +18,20 @@ export default function App() {
         localStorage.clear();
         console.log('Logeed out successfully');
         navigate('/');
+        setLoginStatus("Login")
+
 
     };
     useEffect(() => {
         const storedCurrentUser = localStorage.getItem('data');
         if (storedCurrentUser) {
             // console.log(storedCurrentUser.length > 0);
-            setLoginStatus("Logout")
-        } else {
-            setLoginStatus("Login")
-
+            if (storedCurrentUser.length > 0) {
+                setLoginStatus("Logout")
+            }
         }
 
-    }, [logout])
+    }, [logout, loginStatus])
     // else {
     //     console.log("no user found");
     // }
@@ -51,11 +52,11 @@ export default function App() {
                         <MDBIcon icon='bars' fas />
                     </MDBNavbarToggler>
                     <MDBCollapse open={openNavColor} navbar>
-
+                        {/* 
                         {(loginStatus === "Login") ? (<div><Link to='/' className='text-light mx-3'>Login</Link>
-                            <Link to='/signUp' className='text-light mx-3'>Sign-Up</Link></div>) : ""}
+                            <Link to='/signUp' className='text-light mx-3'>Sign-Up</Link></div>) : ""} */}
                     </MDBCollapse>
-                    <button className='btn btn-danger' onClick={logout}>{loginStatus}</button>
+                    {loginStatus === "Login" ? "" : <button className='btn btn-danger' onClick={logout}>Logout</button>}
                 </MDBContainer>
             </MDBNavbar>
         </>
