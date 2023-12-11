@@ -114,6 +114,18 @@
         "lng": 72.83484
       },
       "id": 9
+    },
+    {
+      "name": "VIJAYKUMAR GANPATBHAI PRAJAPATI",
+      "email": "vjy2080@gmail.coma",
+      "phoneNo": "+919998517185",
+      "address": "Ahmedabad, Gujarat, India",
+      "password": "vjy",
+      "position": {
+        "lat": 23.02778,
+        "lng": 72.60026
+      },
+      "id": 10
     }
   ]
 }

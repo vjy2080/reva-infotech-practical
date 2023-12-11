@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import {
     MDBNavbar,
@@ -13,13 +13,27 @@ export default function App() {
     const navigate = useNavigate();
 
     const [openNavColor, setOpenNavColor] = useState(false);
+    const [loginStatus, setLoginStatus] = useState("Login");
     const logout = () => {
         localStorage.clear();
         console.log('Logeed out successfully');
         navigate('/');
 
     };
-    
+    useEffect(() => {
+        const storedCurrentUser = localStorage.getItem('data');
+        if (storedCurrentUser) {
+            // console.log(storedCurrentUser.length > 0);
+            setLoginStatus("Logout")
+        } else {
+            setLoginStatus("Login")
+
+        }
+
+    }, [logout])
+    // else {
+    //     console.log("no user found");
+    // }
 
     return (
         <>
@@ -37,10 +51,11 @@ export default function App() {
                         <MDBIcon icon='bars' fas />
                     </MDBNavbarToggler>
                     <MDBCollapse open={openNavColor} navbar>
-                        <Link to='/' className='text-light mx-3'>Login</Link>
-                        <Link to='/signUp' className='text-light mx-3'>Sign-Up</Link>
+
+                        {(loginStatus === "Login") ? (<div><Link to='/' className='text-light mx-3'>Login</Link>
+                            <Link to='/signUp' className='text-light mx-3'>Sign-Up</Link></div>) : ""}
                     </MDBCollapse>
-                    <button className='btn btn-danger' onClick={logout}>Logout</button>
+                    <button className='btn btn-danger' onClick={logout}>{loginStatus}</button>
                 </MDBContainer>
             </MDBNavbar>
         </>
