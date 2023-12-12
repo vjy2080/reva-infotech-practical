@@ -124,7 +124,7 @@ function Home() {
                     <MDBModalDialog>
                       <MDBModalContent>
                         <MDBModalHeader>
-                          <MDBModalTitle>Modal title</MDBModalTitle>
+                          <MDBModalTitle>{user.name}</MDBModalTitle>
                           <MDBBtn className='btn-close' color='none' onClick={toggleOpen}></MDBBtn>
                         </MDBModalHeader>
                         <MDBModalBody>

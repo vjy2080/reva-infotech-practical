@@ -19,8 +19,6 @@ export default function App() {
         console.log('Logeed out successfully');
         navigate('/');
         setLoginStatus("Login")
-
-
     };
     useEffect(() => {
         const storedCurrentUser = localStorage.getItem('data');
@@ -31,7 +29,7 @@ export default function App() {
             }
         }
 
-    }, [logout, loginStatus])
+    }, [logout])
     // else {
     //     console.log("no user found");
     // }
